@@ -86,9 +86,28 @@ $stock_bajo = mysqli_fetch_assoc(mysqli_query($conexion, "SELECT COUNT(*) as tot
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         <span class="notif-dot" aria-hidden="true"></span>
       </button>
-      <button aria-label="Menú de opciones">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+      <div style="position:relative">
+  <button aria-label="Menú de opciones" onclick="toggleMenu()" id="menuBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <div id="dropMenu" style="display:none; position:absolute; right:0; top:44px; background:var(--white); border:1px solid var(--border); border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.1); min-width:180px; z-index:200;">
+    <div style="padding:10px 14px; border-bottom:1px solid var(--border); font-size:0.8rem; color:var(--text-muted);">
+      <?php echo $_SESSION['usuario_nombre'] ?? 'Admin'; ?>
+    </div>
+    <a href="cambiar_password.php" style="display:flex; align-items:center; gap:8px; padding:10px 14px; font-size:0.85rem; color:var(--text-main); text-decoration:none;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Cambiar contraseña
+    </a>
+    <a href="agregar_usuario.php" style="display:flex; align-items:center; gap:8px; padding:10px 14px; font-size:0.85rem; color:var(--text-main); text-decoration:none; border-top:1px solid var(--border);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+      Agregar usuario
+    </a>
+    <a href="logout.php" style="display:flex; align-items:center; gap:8px; padding:10px 14px; font-size:0.85rem; color:#c0392b; text-decoration:none; border-top:1px solid var(--border);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Cerrar sesión
+    </a>
+</div>
+</div>
     </div>
   </header>
 
@@ -285,6 +304,19 @@ while ($venta = mysqli_fetch_assoc($resultado_ventas)) {
       li.classList.toggle('active', href === current);
     });
   })();
+</script>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('dropMenu');
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+}
+
+document.addEventListener('click', function(e) {
+  if (!document.getElementById('menuBtn').contains(e.target)) {
+    document.getElementById('dropMenu').style.display = 'none';
+  }
+});
 </script>
 
 </body>
