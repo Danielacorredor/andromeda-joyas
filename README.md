@@ -2,15 +2,15 @@
 
 Sistema web de inventario desarrollado para la gestión de productos, ventas y movimientos de una tienda de joyería.
 
-\---
+
 
 ## Descripción del proyecto
 
 Este es un sistema de inventario web que permite administrar el catálogo de productos, registrar ventas, llevar el historial de movimientos de stock y recibir alertas automáticas cuando los productos tienen poco o ningún stock.
 
-El sistema cuenta con autenticación de usuarios, asi se garantiza que solo las personas con autorizacion puedan acceder y gestionar la información de la empresa.
+El sistema cuenta con autenticación de usuarios, asi se garantiza que solo las personas con autorización puedan acceder y gestionar la información de la empresa.
 
-\---
+
 
 ## Tecnologías utilizadas
 
@@ -23,7 +23,7 @@ El sistema cuenta con autenticación de usuarios, asi se garantiza que solo las 
 |MySQL|Base de datos|
 |XAMPP|Servidor local (Apache + MySQL)|
 
-\---
+
 
 ## Instalación
 
@@ -42,10 +42,10 @@ git clone https://github.com/Danielacorredor/andromeda-joyas.git
 
 **2. Mover a la carpeta de XAMPP**
 
-Copia la carpeta `andromeda\\\_joyas` dentro de:
+Copia la carpeta `andromeda\\\\\\\_joyas` dentro de:
 
 ```
-C:\\\\xampp\\\\htdocs\\\\
+C:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\
 ```
 
 **3. Iniciar XAMPP**
@@ -54,15 +54,15 @@ Abre XAMPP Control Panel y enciende Apache y MySQL.
 
 **4. Crear la base de datos**
 
-Abre `http://localhost/phpmyadmin` e importa el archivo `andromeda\\\_joyas.sql`.
+Abre `http://localhost/phpmyadmin` e importa el archivo `andromeda\\\\\\\_joyas.sql`.
 
 **5. Abrir el sistema**
 
 ```
-http://localhost/andromeda\\\_joyas/login.php
+http://localhost/andromeda\\\\\\\_joyas/login.php
 ```
 
-\---
+
 
 ## Cómo usarlo
 
@@ -95,7 +95,7 @@ El sistema genera alertas automáticas para los productos sin stock, con stock b
 
 Desde el menú de opciones puedes cambiar la contraseña y agregar nuevos usuarios al sistema.
 
-\---
+
 
 ## Desarrollado por
 
