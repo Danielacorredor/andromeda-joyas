@@ -42,10 +42,10 @@ git clone https://github.com/Danielacorredor/andromeda-joyas.git
 
 **2. Mover a la carpeta de XAMPP**
 
-Copia la carpeta `andromeda\\\\\\\_joyas` dentro de:
+Copia la carpeta `andromeda\\\\\\\\\\\\\\\_joyas` dentro de:
 
 ```
-C:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\
+C:\\\\\\\\\\\\\\\\xampp\\\\\\\\\\\\\\\\htdocs\\\\\\\\\\\\\\\\
 ```
 
 **3. Iniciar XAMPP**
@@ -54,12 +54,12 @@ Abre XAMPP Control Panel y enciende Apache y MySQL.
 
 **4. Crear la base de datos**
 
-Abre `http://localhost/phpmyadmin` e importa el archivo `andromeda\\\\\\\_joyas.sql`.
+Abre `http://localhost/phpmyadmin` e importa el archivo `andromeda\\\\\\\\\\\\\\\_joyas.sql`.
 
 **5. Abrir el sistema**
 
 ```
-http://localhost/andromeda\\\\\\\_joyas/login.php
+http://localhost/andromeda\\\\\\\\\\\\\\\_joyas/login.php
 ```
 
 
@@ -73,7 +73,7 @@ Ingresa con las credenciales de administrador. Se recomienda cambiar la contrase
 |Campo|Valor por defecto|
 |-|-|
 |Email|admin@andromedarjoyas.com|
-|Contraseña|password|
+|Contraseña|andromeda|
 
 **Productos**
 
